@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to Petoskey</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #34495e;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .section {
+      display: none;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section.active {
+      display: block;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 1rem 0;
+    }
+    a.link {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to Petoskey!</h1>
+  <p>Your guide to golf, attractions, and great eats in Petoskey, Michigan.</p>
+</header>
+
+<nav>
+  <a href="#" onclick="showSection('home')">Home</a>
+  <a href="#" onclick="showSection('golf')">Golf Courses</a>
+  <a href="#" onclick="showSection('attractions')">Local Attractions</a>
+  <a href="#" onclick="showSection('dining')">Dining</a>
+</nav>
+
+<div id="home" class="section active">
+  <h2>Discover Petoskey</h2>
+  <p>Welcome to Petoskey, Michigan – a beautiful place to relax, play golf, and explore. Use the navigation above to check out top golf courses, must-see attractions, and great local restaurants.</p>
+</div>
+
+<div id="golf" class="section">
+  <h2>🏌️‍♂️ Top Golf Courses</h2>
+  <ul>
+    <li><a href="https://www.bayharborgolf.com/" target="_blank" class="link">Bay Harbor Golf Club</a> – 27-hole resort course with Lake Michigan views.</li>
+    <li><a href="https://www.boynegolf.com/eleven-courses/crooked-tree-golf-club" target="_blank" class="link">Crooked Tree Golf Club</a> – Hillside course with panoramic scenery.</li>
+    <li><a href="https://springbrookgolf.com/" target="_blank" class="link">Springbrook Golf Course</a> – Casual 18-hole public course.</li>
+    <li><a href="https://www.pbvcc.com/" target="_blank" class="link">Petoskey–Bay View Country Club</a> – Historic private course by the bay.</li>
+  </ul>
+</div>
+
+<div id="attractions" class="section">
+  <h2>🌲 Local Attractions</h2>
+  <ul>
+    <li><a href="https://www2.dnr.state.mi.us/ParksandTrails/Details.aspx?id=483" target="_blank" class="link">Petoskey State Park</a> – Dunes, beach, and Petoskey stones.</li>
+    <li><a href="https://en.wikipedia.org/wiki/Little_Traverse_Wheelway" target="_blank" class="link">Little Traverse Wheelway</a> – Scenic trail along the bay.</li>
+    <li><a href="https://www.petoskeydowntown.com/" target="_blank" class="link">Downtown & Gaslight District</a> – Boutiques, galleries, and charm.</li>
+    <li><a href="https://en.wikipedia.org/wiki/Mineral_Well_Park" target="_blank" class="link">Mineral Well Park</a> – Quaint park by the river.</li>
+  </ul>
+</div>
+
+<div id="dining" class="section">
+  <h2>🍽️ Dining Experiences</h2>
+  <ul>
+    <li><a href="https://www.petoskeydowntown.com/type/restaurant/" target="_blank" class="link">Chandler’s – A Restaurant</a> – Upscale American fare.</li>
+    <li><a href="https://springandporter.com/" target="_blank" class="link">Spring & Porter</a> – Modern fine dining and drinks.</li>
+    <li><a href="https://beacon-petoskey.com/" target="_blank" class="link">The Beacon</a> – Burgers, cocktails, and bay views.</li>
+    <li><a href="https://www.palettebistropetoskey.com/" target="_blank" class="link">Palette Bistro</a> – Wine, bistro dishes, and a patio.</li>
+    <li><a href="https://followthepiper.com/top-restaurants-in-petoskey-michigan-in-2024/" target="_blank" class="link">The Back Lot Petoskey</a> – Food trucks and beer garden fun.</li>
+  </ul>
+</div>
+
+<footer>
+  Enjoy your visit to Petoskey! ⛳
+</footer>
+
+<script>
+  function showSection(sectionId) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(sectionId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
